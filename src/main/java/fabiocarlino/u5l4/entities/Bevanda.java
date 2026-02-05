@@ -1,4 +1,4 @@
-package fabiocarlino.u5l4;
+package fabiocarlino.u5l4.entities;
 
 import jakarta.persistence.*;
 
