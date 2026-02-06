@@ -2,12 +2,10 @@ package fabiocarlino.u5l4.config;
 
 import fabiocarlino.u5l4.entities.Bevanda;
 import fabiocarlino.u5l4.entities.Ingrediente;
-//import fabiocarlino.u5l4.entities.Menu;
 import fabiocarlino.u5l4.entities.Pizza;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
@@ -60,22 +58,17 @@ public class ConfigClass {
 
     @Bean(name = "margherita")
     public Pizza margherita() {
-        return new Pizza("margherita", List.of(pomodoro().getNome(), mozzarella().getNome()), 1104, 4.99);
+        return new Pizza("margherita", List.of(pomodoro(), mozzarella()), 1104, 4.99);
     }
 
     @Bean
     public Pizza hawaiana() {
-        return new Pizza("hawaiana",List.of(pomodoro().getNome(), mozzarella().getNome(), prosciutto().getNome(), ananas().getNome()), 1024, 6.49);
+        return new Pizza("hawaiana", List.of(pomodoro(), mozzarella(), prosciutto(), ananas()), 1024, 6.49);
     }
 
     @Bean(name = "salami")
     public Pizza salami() {
-        Pizza pizza = new Pizza("salami", 1160, 5.99);
-        pizza.addIngrediente(pomodoro().getName());
-        pizza.addIngrediente(mozzarella().getName());
-        pizza.addIngrediente(salame().getName());
-
-        return pizza;
+        return new Pizza("salami", List.of(pomodoro(), mozzarella(), mozzarella()), 1160, 5.99);
     }
 
 //    @Bean
@@ -112,4 +105,4 @@ public class ConfigClass {
 //        return new Menu(pizze, ingredienti, bevande);
 //    }
 //
-//}
+}

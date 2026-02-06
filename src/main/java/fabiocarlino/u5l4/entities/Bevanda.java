@@ -19,4 +19,13 @@ public class Bevanda {
 
     @Column(nullable = false)
     private double prezzo;
+
+    public Bevanda() {
+    }
+
+    public Bevanda(String nome, int calorie, double prezzo) {
+        this.nome = nome;
+        this.calorie = calorie;
+        this.prezzo = prezzo;
+    }
 }

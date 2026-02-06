@@ -31,7 +31,7 @@ public class Pizza {
     public Pizza() {
     }
 
-    public Pizza(String nome, List<String> ingredienti, int calorie, double prezzo) {
+    public Pizza(String nome, List<Ingrediente> ingredienti, int calorie, double prezzo) {
         this.nome = nome;
         this.ingredienti = ingredienti;
         this.calorie = calorie;
@@ -66,11 +66,11 @@ public class Pizza {
         this.prezzo = prezzo;
     }
 
-    public List<String> getIngredienti() {
+    public List<Ingrediente> getIngredienti() {
         return ingredienti;
     }
 
-    public void setIngredienti(List<String> ingredienti) {
+    public void setIngredienti(List<Ingrediente> ingredienti) {
         this.ingredienti = ingredienti;
     }
 }

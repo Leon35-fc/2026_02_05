@@ -20,6 +20,8 @@ public class Ingrediente {
     @Column(nullable = false)
     private double prezzo;
 
+//    @ManyToMany
+
     public Ingrediente() {
     }
 
@@ -55,5 +57,12 @@ public class Ingrediente {
 
     public void setPrezzo(double prezzo) {
         this.prezzo = prezzo;
+    }
+
+    @Override
+    public String toString() {
+        return "Ingrediente{" +
+                "nome='" + nome + '\'' +
+                '}';
     }
 }
