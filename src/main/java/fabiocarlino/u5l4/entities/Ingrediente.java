@@ -62,7 +62,10 @@ public class Ingrediente {
     @Override
     public String toString() {
         return "Ingrediente{" +
-                "nome='" + nome + '\'' +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", calorie=" + calorie +
+                ", prezzo=" + prezzo +
                 '}';
     }
 }

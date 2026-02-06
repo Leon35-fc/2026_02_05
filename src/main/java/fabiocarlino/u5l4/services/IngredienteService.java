@@ -12,7 +12,7 @@ public class IngredienteService {
 
     @Autowired
     public IngredienteService(IngredienteRepository ingredienteRepository) {
-        this.ingredienteRepository=ingredienteRepository
+        this.ingredienteRepository = ingredienteRepository;
     }
 
     public void saveIngrediente(Ingrediente newIngrediente) {
